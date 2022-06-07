@@ -49,6 +49,11 @@ export default {
         // animations
         animations: Array | String,
     },
+    methods:{
+        playAnimations: (animationName)=>{
+                this.rive.play([animationName]);
+        }
+    }
     emits: ["load", "loaderror", "play", "pause", "loop", "stop"],
     data() {
         return {

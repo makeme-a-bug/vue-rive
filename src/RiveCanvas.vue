@@ -50,7 +50,7 @@ export default {
         animations: Array | String,
     },
     methods:{
-        playAnimations: (animationName){
+        playAnimations: function(animationName){
                 this.rive.play([animationName]);
         }
     },

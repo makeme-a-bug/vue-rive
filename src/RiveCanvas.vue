@@ -50,7 +50,7 @@ export default {
         animations: Array | String,
     },
     methods:{
-        playAnimations: (animationName)=>{
+        playAnimations: (animationName){
                 this.rive.play([animationName]);
         }
     },
@@ -88,6 +88,8 @@ export default {
             artboard: this.artboard,
             animations: this.animations,
         });
+
+        console.log(this.rive)
 
         // Event wrapping
         this.rive.on("load", (ev) => {

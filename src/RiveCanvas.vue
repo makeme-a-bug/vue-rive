@@ -53,7 +53,7 @@ export default {
         playAnimations: (animationName)=>{
                 this.rive.play([animationName]);
         }
-    }
+    },
     emits: ["load", "loaderror", "play", "pause", "loop", "stop"],
     data() {
         return {

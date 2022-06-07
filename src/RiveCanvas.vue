@@ -9,6 +9,9 @@
 
 <script>
 import { Rive, Layout, Fit, Alignment } from "rive-js";
+import mitt from 'mitt'
+
+const emitter = mitt()
 
 export default {
     name: "RiveCanvas",
@@ -55,11 +58,11 @@ export default {
     },
     beforeMount() {
         // controller events
-        this.$on("play", this.play);
-        this.$on("pause", this.pause);
-        this.$on("stop", this.stop);
-        this.$on("changeArtboard", this.requestArtboardChange);
-        this.$on("changeAnimation", this.requestAnimationChange);
+        emitter.on("play", this.play);
+        emitter.on("pause", this.pause);
+        emitter.on("stop", this.stop);
+        emitter.on("changeArtboard", this.requestArtboardChange);
+        emitter.on("changeAnimation", this.requestAnimationChange);
     },
     beforeDestroy() {
         // dispose event handlers

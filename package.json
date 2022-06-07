@@ -26,6 +26,7 @@
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "rive-js": "0.7.7"
+    "rive-js": "0.7.7",
+    "mitt": "^3.0.0"
   }
 }
